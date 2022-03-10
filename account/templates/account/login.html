@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 
+{% block title %} Login {% endblock %}
+
 {% block content %}
     <h2 class="d-flex justify-content-center">Login User</h2><br/>
     <div class="d-flex justify-content-center">
         <form action="" method="post" class="col-md-6" novalidate>
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Login">
+            <div class="d-flex justify-content-center"><input type="submit" value="Login" class="btn btn-primary"></div>
         </form>
     </div>
 {% endblock %}
